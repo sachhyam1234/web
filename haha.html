@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <meta name="theme-color" content="#090314">
+
+    <title>Happy Birthday Diya ❤️</title>
+
+    <link rel="stylesheet" href="haha.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- =====================================================
+         GLOBAL BACKGROUND
+    ====================================================== -->
+
+    <div class="global-glow glow-one"></div>
+    <div class="global-glow glow-two"></div>
+
+    <div id="floatingHearts"></div>
+
+
+    <!-- =====================================================
+         SCENE 1 — PASSCODE
+    ====================================================== -->
+
+    <section class="scene active" id="scene-passcode">
+
+        <div class="scene-background puppet-background">
+
+            <!-- Put the Tenor GIF inside assets as kisses.gif -->
+            <img
+                class="background-cartoon"
+                src="assets/kisses.gif"
+                alt=""
+                onerror="this.style.display='none'"
+            >
+
+            <div class="dark-overlay"></div>
+        </div>
+
+        <div class="scene-content passcode-content">
+
+            <div class="bebu-marquee">
+                <div class="bebu-track">
+                    bebu ❤️ &nbsp;&nbsp; bebu 🥺 &nbsp;&nbsp; bebu ❤️
+                    &nbsp;&nbsp; bebu 🦋 &nbsp;&nbsp; bebu ❤️
+                </div>
+            </div>
+
+            <!-- Cartoon bubble -->
+            <div class="floating-character">
+                <img
+                    src="https://hi52toys.com/cdn/shop/files/crayon-shin-chan-minime-series-lazy-chill-series.webp?v=1786116166"
+                    alt="Cute cartoon"
+                >
+            </div>
+
+            <p class="tiny-label">A LITTLE SECRET FOR YOU</p>
+
+            <h1 class="pass-title">
+                enter the<br>
+                <span>passcode</span>
+            </h1>
+
+            <div class="password-display" id="passwordDisplay">
+                <span>○</span>
+                <span>○</span>
+                <span>○</span>
+                <span>○</span>
+            </div>
+
+            <p class="pass-hint" id="passHint">
+                only my special girl knows it 💗
+            </p>
+
+            <div class="keypad">
+
+                <button class="key" data-key="1">1</button>
+                <button class="key" data-key="2">2</button>
+                <button class="key" data-key="3">3</button>
+
+                <button class="key" data-key="4">4</button>
+                <button class="key" data-key="5">5</button>
+                <button class="key" data-key="6">6</button>
+
+                <button class="key" data-key="7">7</button>
+                <button class="key" data-key="8">8</button>
+                <button class="key" data-key="9">9</button>
+
+                <button class="key key-special" id="clearKey">C</button>
+                <button class="key" data-key="0">0</button>
+                <button class="key key-special" id="backKey">⌫</button>
+
+            </div>
+
+            <p class="wrong-message" id="wrongMessage"></p>
+
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 2 — HAPPY BIRTHDAY + MINI GAME
+    ====================================================== -->
+
+    <section class="scene" id="scene-game">
+
+        <div class="stars"></div>
+
+        <div class="scene-content game-content">
+
+            <p class="tiny-label">YOU UNLOCKED THE FIRST SURPRISE</p>
+
+            <h1 class="birthday-title">
+                Happy<br>
+                <span>Birthday</span>
+            </h1>
+
+            <div class="birthday-character-wrap">
+
+                <div class="character-glow"></div>
+
+                <img
+                    class="birthday-character"
+                    src="https://i.pinimg.com/564x/6a/42/69/6a4269b6b161235329382215c7a6c829.jpg"
+                    alt="Birthday cartoon"
+                >
+
+            </div>
+
+            <p class="game-intro">
+                But wait... birthday girls have to pass a tiny game first 😌❤️
+            </p>
+
+            <div class="game-box">
+
+                <div class="game-top">
+                    <span>Catch the hearts 💕</span>
+                    <strong>
+                        <span id="heartScore">0</span> / 5
+                    </strong>
+                </div>
+
+                <div id="heartGameArea"></div>
+
+            </div>
+
+            <p class="game-message" id="gameMessage">
+                Tap 5 hearts to unlock your surprise.
+            </p>
+
+            <button
+                class="cute-button hidden"
+                id="gameNextBtn"
+            >
+                Open Surprise 💗
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 3 — GIFT + BOUQUET + FLOWERS
+    ====================================================== -->
+
+    <section class="scene" id="scene-bouquet">
+
+        <div class="scene-content center-content">
+
+            <p class="tiny-label">A LITTLE GIFT FOR YOU</p>
+
+            <h2 class="scene-title">
+                Something pretty<br>
+                is waiting 🌷
+            </h2>
+
+            <div
+                class="gift-box"
+                id="bouquetGift"
+                role="button"
+                tabindex="0"
+            >
+
+                <div class="gift-lid"></div>
+
+                <div class="gift-body"></div>
+
+                <div class="gift-ribbon vertical"></div>
+
+                <div class="gift-ribbon horizontal"></div>
+
+                <div class="gift-bow">
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="gift-sparkle">✦</div>
+            </div>
+
+            <p class="tap-text" id="bouquetTapText">
+                Tap the gift 🎁
+            </p>
+
+
+            <div class="bouquet-reveal" id="bouquetReveal">
+
+                <img
+                    src="C:\Users\sachh\Downloads\ChatGPT Image Oct 8, 2026, 08_53_49 PM.png"
+                    class="bouquet-image"
+                    alt="Bouquet"
+                >
+
+                <h3>
+                    Flowers for my beautiful girl 🌷
+                </h3>
+
+                <button
+                    class="cute-button"
+                    id="flowerPlayBtn"
+                >
+                    Play with flowers 🌸
+                </button>
+
+            </div>
+
+            <div
+                class="flower-rain"
+                id="flowerRain"
+            ></div>
+
+            <button
+                class="cute-button hidden bottom-button"
+                id="flowerNextBtn"
+            >
+                Next Surprise ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 4 — CAKE
+    ====================================================== -->
+
+    <section class="scene" id="scene-cake">
+
+        <div class="cat-decoration cat-left">
+            🐱
+        </div>
+
+        <div class="cat-decoration cat-right">
+            🐱💕
+        </div>
+
+        <div class="cake-confetti" id="cakeConfetti"></div>
+
+        <div class="scene-content center-content">
+
+            <p class="tiny-label">
+                ONE MORE SURPRISE
+            </p>
+
+            <h2 class="scene-title">
+                Birthday cake<br>
+                for my wife 🎂
+            </h2>
+
+            <div
+                class="cake-gift"
+                id="cakeGift"
+            >
+
+                <div class="cake-gift-lid"></div>
+                <div class="cake-gift-box"></div>
+
+                <div class="cake-ribbon-v"></div>
+                <div class="cake-ribbon-h"></div>
+
+                <div class="cake-bow">
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <p
+                class="tap-text"
+                id="cakeTapText"
+            >
+                Tap to open 🎁
+            </p>
+
+
+            <div
+                class="cake-area"
+                id="cakeArea"
+            >
+
+                <div class="cake">
+
+                    <div class="candle candle-one">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle-two">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle-three">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="cake-top"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-bottom"></div>
+
+                </div>
+
+                <div
+                    class="countdown"
+                    id="cakeCountdown"
+                >
+                    5
+                </div>
+
+                <p
+                    class="blow-text"
+                    id="blowText"
+                >
+                    Time to blow the candles 🕯️
+                </p>
+
+                <button
+                    class="cute-button hidden"
+                    id="cutCakeBtn"
+                >
+                    Cut the Cake 🔪
+                </button>
+
+            </div>
+
+
+            <button
+                class="cute-button hidden bottom-button"
+                id="waitingBtn"
+            >
+                Waiting for you ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 5 — VIDEO
+    ====================================================== -->
+
+    <section class="scene" id="scene-video">
+
+        <div class="scene-content video-content">
+
+            <p class="tiny-label">
+                A MESSAGE JUST FOR YOU
+            </p>
+
+            <h2 class="scene-title">
+                Watch this first 🎬
+            </h2>
+
+            <div class="video-frame">
+
+                <video
+                    id="birthdayVideo"
+                    playsinline
+                    controls
+                    preload="metadata"
+                >
+                    <source
+                        src="C:\Users\sachh\Downloads\1005(2) (1).mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support video.
+                </video>
+
+            </div>
+
+            <p
+                class="video-hint"
+                id="videoHint"
+            >
+                Take your time, my love ❤️
+            </p>
+
+            <button
+                class="cute-button hidden"
+                id="videoNextBtn"
+            >
+                Next Gift 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 6 — 7 PROMISE CARDS
+    ====================================================== -->
+
+    <section class="scene" id="scene-promises">
+
+        <div class="scene-content promise-content">
+
+            <p class="tiny-label">
+                SEVEN LITTLE PROMISES
+            </p>
+
+            <h2 class="scene-title promise-heading">
+                Tap every card ❤️
+            </h2>
+
+            <p class="promise-subtitle">
+                I want you to know these aren't just words.
+            </p>
+
+            <div class="promise-grid">
+
+                <div class="promise-card" data-number="1">
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <span>01</span>
+                            <b>Tap me ❤️</b>
+                        </div>
+
+                        <div class="card-back">
+                            God promise I will never leave you,
+                            my wife Diya Chhetri. ❤️
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="promise-card" data-number="2">
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <span>02</span>
+                            <b>Tap me ❤️</b>
+                        </div>
+
+                        <div class="card-back">
+                            God promise I will never cheat you.
+                            ❤️
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="promise-card" data-number="3">
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <span>03</span>
+                            <b>Tap me ❤️</b>
+                        </div>
+
+                        <div class="card-back">
+                            God promise I will be always with you,
+                            lifetime. ♾️❤️
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="promise-card" data-number="4">
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <span>04</span>
+                            <b>Tap me ❤️</b>
+                        </div>
+
+                        <div class="card-back">
+                            God promise hjr ko sabai dukha sukha ma
+                            hjr sangai basxu. ❤️
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="promise-card" data-number="5">
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <span>05</span>
+                            <b>Tap me ❤️</b>
+                        </div>
+
+                        <div class="card-back">
+                            God promise I will change my feelings
+                            on you, always love. ❤️
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="promise-card" data-number="6">
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <span>06</span>
+                            <b>Tap me ❤️</b>
+                        </div>
+
+                        <div class="card-back">
+                            God promise never disrespect you.
+                            ❤️
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="promise-card" data-number="7">
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <span>07</span>
+                            <b>Tap me ❤️</b>
+                        </div>
+
+                        <div class="card-back">
+                            God promise timro ramro din ma ni sath
+                            dinxu ra naramro din ma ni afno antim
+                            sas saman hjr ko gulami grxu mero budi
+                            Diyaa. ❤️
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div
+                class="love-ending"
+                id="loveEnding"
+            >
+
+                <div class="love-decoration">
+                    🐱 💕 🦋 💕 🐱
+                </div>
+
+                <h1>
+                    I LOVE YOU
+                </h1>
+
+                <h2>
+                    MY LOVE DIYA ❤️
+                </h2>
+
+                <div class="love-stars">
+                    ✦ ✧ ✦ ✧ ✦
+                </div>
+
+                <button
+                    class="cute-button"
+                    id="promiseNextBtn"
+                >
+                    Next Gift 🌹
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 7 — ROSE
+    ====================================================== -->
+
+    <section class="scene" id="scene-rose">
+
+        <div class="rose-particles"></div>
+
+        <div class="scene-content center-content">
+
+            <p class="tiny-label">
+                FOR MY GHARWALI
+            </p>
+
+            <h2 class="rose-title">
+                rose for u<br>
+                <span>gharwali 🌹</span>
+            </h2>
+
+            <div class="rose-display">
+
+                <div class="rose-glow"></div>
+
+                <img
+                    src="https://www.surprose.com/media/catalog/product/cache/a003019ba7fcb54fff9e7f7465db6631/s/i/single-red-rose-in-a-matching-bouquet-8720174082382-bb.jpg"
+                    alt="Red rose"
+                >
+
+            </div>
+
+            <p class="romantic-caption">
+                One rose for the girl who made my world beautiful. ❤️
+            </p>
+
+            <button
+                class="cute-button bottom-button"
+                data-next="scene-chocolate"
+            >
+                Next Gift 🍫
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 8 — CHOCOLATE
+    ====================================================== -->
+
+    <section class="scene" id="scene-chocolate">
+
+        <div class="chocolate-sparkles">
+            ✦ ✧ ✦ ✧ ✦
+        </div>
+
+        <div class="scene-content center-content">
+
+            <p class="tiny-label">
+                SOMETHING SWEET
+            </p>
+
+            <h2 class="scene-title">
+                Chocolate for you<br>
+                <span>my love 🍫</span>
+            </h2>
+
+            <div class="photo-frame chocolate-frame">
+
+                <img
+                    src="C:\Users\sachh\Downloads\ChatGPT Image Oct 8, 2026, 10_24_55 PM.png"
+                    alt="Chocolate"
+                >
+
+            </div>
+
+            <p class="romantic-caption">
+                Because my love for you is sweeter than chocolate. 🥺❤️
+            </p>
+
+            <button
+                class="cute-button bottom-button"
+                data-next="scene-hug"
+            >
+                Next Surprise 💕
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 9 — HUG
+    ====================================================== -->
+
+    <section class="scene" id="scene-hug">
+
+        <div class="hug-background-hearts">
+            ❤️ &nbsp; 💕 &nbsp; ❤️ &nbsp; 💗 &nbsp; ❤️
+        </div>
+
+        <div class="scene-content center-content">
+
+            <p class="tiny-label">
+                IF I WERE THERE RIGHT NOW
+            </p>
+
+            <h2 class="hug-title">
+                Hug me tightly<br>
+                <span>my wife Diya 🥺❤️</span>
+            </h2>
+
+            <div class="photo-frame hug-frame">
+
+                <img
+                    src="C:\Users\sachh\Downloads\images (18).jpg"
+                    alt="Hug"
+                >
+
+            </div>
+
+            <p class="romantic-caption">
+                No screen. No distance. Just one long hug. 🤍
+            </p>
+
+            <button
+                class="cute-button glowing-button bottom-button"
+                data-next="scene-letter"
+            >
+                Last Gift 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCENE 10 — LOVE LETTER
+    ====================================================== -->
+
+    <section class="scene" id="scene-letter">
+
+        <div class="letter-particles"></div>
+
+        <div class="scene-content letter-content">
+
+            <p class="tiny-label">
+                MY LAST SURPRISE
+            </p>
+
+            <h2 class="scene-title">
+                One last thing<br>
+                for you 💌
+            </h2>
+
+            <div
+                class="letter-wrapper"
+                id="letterWrapper"
+            >
+
+                <div class="envelope">
+
+                    <div class="envelope-back"></div>
+
+                    <div class="letter-paper">
+
+                        <div class="letter-inner">
+
+                            <div class="letter-heart">
+                                ❤️
+                            </div>
+
+                            <h3>
+                                My Diya
+                            </h3>
+
+                            <p>
+                                If I could give you one thing in this
+                                world, I would give you the ability to
+                                see yourself through my eyes.
+                            </p>
+
+                            <p>
+                                Then you would understand just how
+                                precious, beautiful and special you
+                                really are to me.
+                            </p>
+
+                            <p>
+                                Happy Birthday, my love.
+                            </p>
+
+                            <p>
+                                No matter how many pages this little
+                                world has, my favorite page will always
+                                be you.
+                            </p>
+
+                            <p class="letter-sign">
+                                Yours,<br>
+                                Sachhyam ❤️
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="envelope-flap"></div>
+
+                    <div class="envelope-heart">
+                        ❤️
+                    </div>
+
+                </div>
+
+                <p
+                    class="letter-tap"
+                    id="letterTap"
+                >
+                    Tap the letter 💌
+                </p>
+
+            </div>
+
+            <div
+                class="final-message"
+                id="finalMessage"
+            >
+
+                <div class="final-hearts">
+                    ❤️ 💕 ❤️ 💕 ❤️
+                </div>
+
+                <h1>
+                    Happy Birthday
+                </h1>
+
+                <h2>
+                    My Diya ❤️
+                </h2>
+
+                <p>
+                    I love you more than these little words
+                    could ever explain.
+                </p>
+
+                <div class="final-sign">
+                    — Sachhyam
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<script src="haha.js"></script>
+
+</body>
+</html>
